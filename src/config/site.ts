@@ -1,10 +1,10 @@
 // Site configuration
 export const siteConfig = {
   // Language setting
-  lang: "en",
+  lang: "ro",
   
   // Site details from config.json:site
-  title: "Bit Doze Astro Blog Theme", // from config.json:site.title
+  title: "fratica.ro",
   // description is used from existing site.ts, will be updated by config.json:metadata.meta_description
   // url is removed, Astro.site will be used
 
@@ -12,24 +12,24 @@ export const siteConfig = {
   logo: "/logo.svg",
   logoWidth: "200",
   logoHeight: "30",
-  logoText: "Bit Doze Astro Blog Theme",
+  logoText: "fratica.ro",
 
   // SEO metadata from config.json:metadata
-  author: "Your Name", // from config.json:metadata.meta_author
-  description: "A modern, responsive blog theme for Astro with support for tags, categories, and series.", // from config.json:metadata.meta_description
-  ogImage: "/images/og-image.png", // from config.json:metadata.meta_image (replaces defaultImage)
+  author: "fratica.ro",
+  description: "Resurse și tutoriale pe fratica.ro",
+  ogImage: "/images/og-image.png",
 
   // Pagination settings from config.json:settings
-  postsPerPage: 11, // from config.json:settings.pagination
-  summaryLength: 100, // from config.json:settings.summary_length
+  postsPerPage: 11,
+  summaryLength: 100,
   
-  // SEO settings (existing in site.ts)
+  // SEO settings
   noindex: {
-    tags: true, // Set to true to add noindex meta tag to tag pages
-    categories: false, // Set to true to add noindex meta tag to category pages
-    authors: false, // Set to true to add noindex meta tag to author pages
+    tags: true,
+    categories: false,
+    authors: false,
   },
   
   // Params from config.json:params
-  copyright: "Copyright © 2025", // from config.json:params.copyright
+  copyright: "Copyright © 2025 fratica.ro",
 };

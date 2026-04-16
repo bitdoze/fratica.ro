@@ -25,16 +25,16 @@ const tagCounts = tags.map(tag => {
 ---
 
 <Layout 
-  title={`Tags - ${siteConfig.title}`}
-  description="Browse all tags and topics on our blog"
+  title={`Etichete - ${siteConfig.title}`}
+  description="Navighează toate etichetele și subiectele de pe blog"
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Tags
+        Etichete
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Browse posts by tag
+        Navighează articolele după etichetă
       </p>
     </header>
     
@@ -56,7 +56,7 @@ const tagCounts = tags.map(tag => {
     
     {tagCounts.length === 0 && (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No tags found.</p>
+        <p class="text-gray-600 dark:text-gray-400">Nicio etichetă găsită.</p>
       </div>
     )}
   </div>

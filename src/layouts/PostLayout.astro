@@ -18,7 +18,7 @@ const canonicalURL = Astro.site
   : Astro.url.pathname;
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
+  { name: 'Acasă', url: '/' },
   { name: 'Blog', url: '/blog/' },
   ...(categories?.length ? [{ name: categories[0], url: `/categories/${categories[0].toLowerCase()}/` }] : []),
   { name: title, url: canonicalURL }

@@ -55,16 +55,16 @@ const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
 <Layout 
   title={`${formattedCategory} - ${siteConfig.title}`}
-  description={`Browse all posts in the ${formattedCategory} category`}
+  description={`Navighează toate articolele din categoria ${formattedCategory}`}
   noindex={noindex}
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Category: {formattedCategory}
+        Categorie: {formattedCategory}
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        {count} {count === 1 ? 'post' : 'posts'} in this category
+        {count} {count === 1 ? 'articol' : 'articole'} în această categorie
       </p>
     </header>
     
@@ -76,7 +76,7 @@ const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
       </div>
     ) : (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No posts found in this category.</p>
+        <p class="text-gray-600 dark:text-gray-400">Niciun articol găsit în această categorie.</p>
       </div>
     )}
     

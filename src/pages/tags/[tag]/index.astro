@@ -54,17 +54,17 @@ const formattedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 ---
 
 <Layout 
-  title={`Posts tagged with ${formattedTag} - ${siteConfig.title}`}
-  description={`Browse all posts tagged with ${formattedTag}`}
+  title={`Articole cu eticheta ${formattedTag} - ${siteConfig.title}`}
+  description={`Navighează toate articolele cu eticheta ${formattedTag}`}
   noindex={noindex}
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Tag: #{formattedTag}
+        Etichetă: #{formattedTag}
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        {count} {count === 1 ? 'post' : 'posts'} with this tag
+        {count} {count === 1 ? 'articol' : 'articole'} cu această etichetă
       </p>
     </header>
     
@@ -76,7 +76,7 @@ const formattedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
       </div>
     ) : (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No posts found with this tag.</p>
+        <p class="text-gray-600 dark:text-gray-400">Niciun articol găsit cu această etichetă.</p>
       </div>
     )}
     

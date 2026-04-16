@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import menu from "@config/menu.json";
 import social from "@config/social.json";
 import { siteConfig } from "@config/site";
-import logoSVG from "@assets/favicons/bitdoze_logo_better.svg";
+import logoSVG from "@assets/favicons/fratica-logo.svg";
 
 const footerMenu = menu.footer;
 const socialLinks = Object.entries(social).filter(([_, url]) => url);
@@ -22,7 +22,7 @@ const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
       <div>
         <Image src={logoSVG} alt={siteConfig.title} width={140} height={140} />
         <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          Providing valuable resources and tutorials for web developers and tech enthusiasts.
+          Resurse și tutoriale pentru pasionații de tehnologie.
         </p>
         {socialLinks.length > 0 && (
           <div class="flex gap-3 mt-4">
@@ -37,7 +37,7 @@ const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
 
       <!-- Links -->
       <nav>
-        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Linkuri rapide</h3>
         <ul class="space-y-2">
           {footerMenu.map((item) => (
             <li>
@@ -51,7 +51,7 @@ const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
 
       <!-- Recent Posts -->
       <div>
-        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Latest Posts</h3>
+        <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Articole recente</h3>
         <div class="space-y-3">
           {recentPosts.map((post) => (
             <a href={`/${post.slug}/`} class="flex gap-3 group">
@@ -68,7 +68,7 @@ const recentPosts = (await getCollection('posts', ({ data }) => !data.draft))
     </div>
 
     <p class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
-      &copy; {new Date().getFullYear()} {siteConfig.title}. All rights reserved.
+      &copy; {new Date().getFullYear()} {siteConfig.title}. Toate drepturile rezervate.
     </p>
   </div>
 </footer>

@@ -1,41 +1,41 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Acasă",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Despre",
       "url": "/about/"
     },
     {
-      "name": "Series",
+      "name": "Serii",
       "url": "/series/"
     },
 
     {
-      "name": "Pages",
+      "name": "Pagini",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Authors",
+          "name": "Autori",
           "url": "/authors/"
         },
         {
-          "name": "Categories",
+          "name": "Categorii",
           "url": "/categories/"
         },
         {
-          "name": "Tags",
+          "name": "Etichete",
           "url": "/tags/"
         },
         {
-          "name": "About",
+          "name": "Despre",
           "url": "/about/"
         },
         {
-          "name": "Privacy Policy",
+          "name": "Politica de confidențialitate",
           "url": "/privacy/"
         }
       ]
@@ -48,7 +48,7 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "Despre",
       "url": "/about/"
     },
     {
@@ -56,7 +56,7 @@
       "url": "/contact/"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Politica de confidențialitate",
       "url": "/privacy/"
     }
   ]

@@ -25,16 +25,16 @@ const categoryCounts = categories.map(category => {
 ---
 
 <Layout 
-  title={`Categories - ${siteConfig.title}`}
-  description="Browse all categories of posts on our blog"
+  title={`Categorii - ${siteConfig.title}`}
+  description="Navighează toate categoriile de articole de pe blog"
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Categories
+        Categorii
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Browse posts by category
+        Navighează articolele după categorie
       </p>
     </header>
     
@@ -51,7 +51,7 @@ const categoryCounts = categories.map(category => {
             </span>
           </div>
           <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-0.5 rounded-full">
-            {count} {count === 1 ? 'post' : 'posts'}
+            {count} {count === 1 ? 'articol' : 'articole'}
           </span>
         </a>
       ))}
@@ -59,7 +59,7 @@ const categoryCounts = categories.map(category => {
     
     {categoryCounts.length === 0 && (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No categories found.</p>
+        <p class="text-gray-600 dark:text-gray-400">Nicio categorie găsită.</p>
       </div>
     )}
   </div>

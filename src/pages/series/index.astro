@@ -66,14 +66,14 @@ seriesList.sort((a, b) => a.name.localeCompare(b.name));
 
 // Breadcrumbs for SEO
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Series', url: '/series/' }
+  { name: 'Acasă', url: '/' },
+  { name: 'Serii', url: '/series/' }
 ];
 ---
 
 <Layout 
-  title={`Article Series | ${siteConfig.title}`}
-  description="Browse our collection of article series on various topics"
+  title={`Serii de articole | ${siteConfig.title}`}
+  description="Navighează colecția noastră de serii de articole pe diverse subiecte"
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <!-- Breadcrumb Navigation -->
@@ -81,16 +81,16 @@ const breadcrumbs = [
     
     <header class="mb-12">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Article Series
+        Serii de articole
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Browse our collection of multi-part article series on various topics
+        Navighează colecția noastră de serii de articole pe diverse subiecte
       </p>
     </header>
 
     {seriesList.length === 0 ? (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No series available yet. Check back soon!</p>
+        <p class="text-gray-600 dark:text-gray-400">Nicio serie disponibilă încă. Reveniți curând!</p>
       </div>
     ) : (
       <div class="space-y-12">
@@ -100,7 +100,7 @@ const breadcrumbs = [
               <Icon name="mdi:book-open-variant" class="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
               {series.name}
               <span class="ml-3 text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
-                {series.count} {series.count === 1 ? 'part' : 'parts'}
+                {series.count} {series.count === 1 ? 'parte' : 'părți'}
               </span>
             </h2>
             
