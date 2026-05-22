@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Bine ati venit pe Fratica.ro</title>
+  <desc id="desc">Coperta pentru articolul introductiv Fratica.ro</desc>
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="72" y="72" width="1136" height="576" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="4"/>
+  <circle cx="1090" cy="180" r="82" fill="#dbeafe"/>
+  <circle cx="178" cy="540" r="96" fill="#e0f2fe"/>
+  <path d="M170 182h940" stroke="#2563eb" stroke-width="10" stroke-linecap="round"/>
+  <text x="170" y="320" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">Bine ati venit</text>
+  <text x="170" y="415" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900">pe Fratica.ro</text>
+  <text x="174" y="500" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="500">Ghiduri practice in romana pentru bani, cariera, tech si viata de zi cu zi.</text>
+  <g transform="translate(940 420)">
+    <rect width="170" height="112" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="4"/>
+    <path d="M38 56h94M38 82h62M38 30h94" stroke="#2563eb" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

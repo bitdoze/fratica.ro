@@ -5,6 +5,7 @@ import PostCard from '@components/blog/PostCard.astro';
 import Pagination from '@components/common/Pagination.astro';
 import { getPagination } from '@utils/pagination';
 import { siteConfig } from '@config/site';
+import { slugify } from '@utils/slug';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => {
@@ -23,7 +24,7 @@ export async function getStaticPaths() {
     });
     
     return {
-      params: { category: category.toLowerCase() },
+      params: { category: slugify(category) },
       props: { 
         category,
         posts: categoryPosts,
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 const { category, posts, count } = Astro.props;
-const basePath = `/categories/${category.toLowerCase()}`;
+const basePath = `/categories/${slugify(category)}`;
 
 // Get pagination data for first page
 const { postsPerPage } = getPagination({ 
@@ -55,16 +56,16 @@ const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
 <Layout 
   title={`${formattedCategory} - ${siteConfig.title}`}
-  description={`Navighează toate articolele din categoria ${formattedCategory}`}
+  description={`Browse all posts in the ${formattedCategory} category`}
   noindex={noindex}
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Categorie: {formattedCategory}
+        Category: {formattedCategory}
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        {count} {count === 1 ? 'articol' : 'articole'} în această categorie
+        {count} {count === 1 ? 'post' : 'posts'} in this category
       </p>
     </header>
     
@@ -76,7 +77,7 @@ const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
       </div>
     ) : (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">Niciun articol găsit în această categorie.</p>
+        <p class="text-gray-600 dark:text-gray-400">No posts found in this category.</p>
       </div>
     )}
     

@@ -1,20 +1,19 @@
 {
   "main": [
     {
-      "name": "Acasă",
+      "name": "Acasa",
       "url": "/"
     },
     {
-      "name": "Despre",
-      "url": "/about/"
+      "name": "Ghiduri",
+      "url": "/blog/"
     },
     {
-      "name": "Serii",
-      "url": "/series/"
+      "name": "Categorii",
+      "url": "/categories/"
     },
-
     {
-      "name": "Pagini",
+      "name": "Resurse",
       "url": "",
       "hasChildren": true,
       "children": [
@@ -35,12 +34,11 @@
           "url": "/about/"
         },
         {
-          "name": "Politica de confidențialitate",
+          "name": "Politica de confidentialitate",
           "url": "/privacy/"
         }
       ]
     },
-
     {
       "name": "Contact",
       "url": "/contact/"
@@ -56,7 +54,7 @@
       "url": "/contact/"
     },
     {
-      "name": "Politica de confidențialitate",
+      "name": "Politica de confidentialitate",
       "url": "/privacy/"
     }
   ]

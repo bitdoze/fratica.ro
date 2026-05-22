@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
 import { siteConfig } from '@config/site';
+import { slugify } from '@utils/slug';
 
 // Get all blog posts
 const posts = await getCollection('posts', ({ data }) => {
@@ -19,14 +20,14 @@ const categoryCounts = categories.map(category => {
   return {
     name: category,
     count,
-    slug: category.toLowerCase()
+    slug: slugify(category)
   };
 }).sort((a, b) => b.count - a.count); // Sort by post count (descending)
 ---
 
 <Layout 
   title={`Categorii - ${siteConfig.title}`}
-  description="Navighează toate categoriile de articole de pe blog"
+  description="Rasfoieste articolele Fratica.ro pe categorii"
 >
   <div class="w-full py-8">
     <header class="mb-10">
@@ -34,7 +35,7 @@ const categoryCounts = categories.map(category => {
         Categorii
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Navighează articolele după categorie
+        Rasfoieste articolele dupa subiect.
       </p>
     </header>
     
@@ -59,7 +60,7 @@ const categoryCounts = categories.map(category => {
     
     {categoryCounts.length === 0 && (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">Nicio categorie găsită.</p>
+        <p class="text-gray-600 dark:text-gray-400">Nu am gasit categorii.</p>
       </div>
     )}
   </div>

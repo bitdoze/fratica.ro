@@ -4,7 +4,7 @@ export const siteConfig = {
   lang: "ro",
   
   // Site details from config.json:site
-  title: "fratica.ro",
+  title: "Fratica.ro", // from config.json:site.title
   // description is used from existing site.ts, will be updated by config.json:metadata.meta_description
   // url is removed, Astro.site will be used
 
@@ -12,24 +12,24 @@ export const siteConfig = {
   logo: "/logo.svg",
   logoWidth: "200",
   logoHeight: "30",
-  logoText: "fratica.ro",
+  logoText: "Fratica.ro",
 
   // SEO metadata from config.json:metadata
-  author: "fratica.ro",
-  description: "Resurse și tutoriale pe fratica.ro",
-  ogImage: "/images/og-image.png",
+  author: "Echipa Fratica.ro", // from config.json:metadata.meta_author
+  description: "Ghiduri practice in romana despre bani, cariera, tehnologie, AI, viata de zi cu zi si decizii mai bune.", // from config.json:metadata.meta_description
+  ogImage: "/images/og-image.svg",
 
   // Pagination settings from config.json:settings
-  postsPerPage: 11,
-  summaryLength: 100,
+  postsPerPage: 11, // from config.json:settings.pagination
+  summaryLength: 100, // from config.json:settings.summary_length
   
-  // SEO settings
+  // SEO settings (existing in site.ts)
   noindex: {
-    tags: true,
-    categories: false,
-    authors: false,
+    tags: true, // Set to true to add noindex meta tag to tag pages
+    categories: false, // Set to true to add noindex meta tag to category pages
+    authors: false, // Set to true to add noindex meta tag to author pages
   },
   
   // Params from config.json:params
-  copyright: "Copyright © 2025 fratica.ro",
+  copyright: "Copyright © 2026", // from config.json:params.copyright
 };

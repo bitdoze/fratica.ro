@@ -1,9 +1,13 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 
 const entry = await getEntry("about", "index");
-const { Content } = await entry.render();
+if (!entry) {
+  return Astro.redirect("/404/");
+}
+
+const { Content } = await render(entry);
 const { title, description, meta_title, image, what_i_do } = entry.data;
 ---
 
@@ -35,7 +39,7 @@ const { title, description, meta_title, image, what_i_do } = entry.data;
               href="/contact" 
               class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-300 font-medium inline-block"
             >
-              Ia legătura
+              Get In Touch
             </a>
           </div>
         </div>

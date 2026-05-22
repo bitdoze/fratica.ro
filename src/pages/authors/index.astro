@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
 import { siteConfig } from '@config/site';
+import { slugify } from '@utils/slug';
 
 // Get all blog posts
 const posts = await getCollection('posts', ({ data }) => {
@@ -19,7 +20,7 @@ const authorCounts = authors.map(author => {
   return {
     name: author,
     count,
-    slug: author.toLowerCase()
+    slug: slugify(author)
   };
 }).sort((a, b) => b.count - a.count); // Sort by post count (descending)
 
@@ -32,16 +33,16 @@ const formatAuthorName = (name) => {
 ---
 
 <Layout 
-  title={`Autori - ${siteConfig.title}`}
-  description="Cunoaște-ne autorii și navighează articolele lor"
+  title={`Authors - ${siteConfig.title}`}
+  description="Meet our authors and browse their posts"
 >
   <div class="w-full py-8">
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Autori
+        Authors
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Cunoaște-ne autorii și navighează articolele lor
+        Meet our content creators and browse their posts
       </p>
     </header>
     
@@ -58,7 +59,7 @@ const formatAuthorName = (name) => {
             </span>
           </div>
           <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-0.5 rounded-full">
-            {count} {count === 1 ? 'articol' : 'articole'}
+            {count} {count === 1 ? 'post' : 'posts'}
           </span>
         </a>
       ))}
@@ -66,7 +67,7 @@ const formatAuthorName = (name) => {
     
     {authorCounts.length === 0 && (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">Niciun autor găsit.</p>
+        <p class="text-gray-600 dark:text-gray-400">No authors found.</p>
       </div>
     )}
   </div>
